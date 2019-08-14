@@ -44,7 +44,7 @@
 
             </div>
 
-            <div id="London" class="tabcontent">
+            <div id="London" class="tabcontent active">
               <img src="video.png" alt="Логотип" class="imagevideo">
               <p>First</p>
             </div>
@@ -84,13 +84,13 @@
           var i, tabcontent, tablinks;
           tabcontent = document.getElementsByClassName("tabcontent");
           for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
+            tabcontent[i].classList.remove('active');
           }
           tablinks = document.getElementsByClassName("tablinks");
           for (i = 0; i < tablinks.length; i++) {
             tablinks[i].className = tablinks[i].className.replace(" active", "");
           }
-          document.getElementById(cityName).style.display = "block";
+          document.getElementById(cityName).classList.add('active');
           evt.currentTarget.className += " active";
         }
         </script>
