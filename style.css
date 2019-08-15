@@ -15,8 +15,6 @@ div {
 header{
   background: url(hero.png) no-repeat left center / cover;
   height: 100vh;
-  align:left;
-
   background-size:  contain;
   /* height: 100vh;
   align:left;
@@ -93,12 +91,14 @@ h1{
   color: black;
 }
 .center-title{
-  text-align: center;
+  
   text-transform: uppercase;
   color: black;
+  text-align: justify;
+  position: absolute;
 }
-.center-title titleh3{
-  width: 150px;
+.center-title .titleh3{
+  text-align: center;
 }
 
 .imagevideo{
@@ -108,17 +108,18 @@ h1{
   object-fit: contain ;
 }
 .title-content{
+  align-items: flex-start;
   display:flex;
     flex-direction: row;
 }
 
 .title{
   overflow: hidden;
-  border: 1px solid #ccc;
   background-color: #f1f1f1;
   display:flex;
   flex-direction: column;
   flex: 1;
+  
 }
 .title button {
   background-color: inherit;
@@ -139,11 +140,23 @@ h1{
 .tabcontent{
   display: none;
   padding: 6px 12px;
-  border: 1px solid #ccc;
+
   border-top: none;
   flex: 3;
 }
 
 .tabcontent.active {
   display: block;
+}
+
+
+.controls button[data-state="subtitles"] {
+  height:85%;
+  text-indent:0;
+  font-size:16px;
+  font-size:1rem;
+  font-weight:bold;
+  color:#666;
+  background:#000;
+  border-radius:2px;
 }
